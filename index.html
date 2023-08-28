@@ -38,24 +38,25 @@
     }
   </style>
 </head>
-<body>
-<div class="slideshow">
-  <!-- slide 1 -->
-  <div class="slide active">
-    <h2>Conozca los siguientes pasos.</h2>
-    <p>Cada paso tendrá vídeos y actividades que podrás completar a tu propio ritmo. Durante este proceso, te sugiero que la curiosidad forme parte permanente de tu jornada. Mantén la mente abierta y date la oportunidad de explorar nuevos puntos de vista.</p>
-    <p style="font-style: italic; font-size: 14px;">Haz clic en la flecha de abajo para continuar.</p>
-    <img src="https://www.worthyweightloss.com/wp-content/uploads/2018/09/am-I-a-candidate-side.jpg" alt="Image 1">
-  </div>
-  <!-- slide 2 -->
-  <div class="slide">
-    <h2>PASSO 1 - CONOCER:</h2>
-    <p>HABILIDADES</p>
-    <p>ASPIRACIONES</p>
-    <p>OPORTUNIDADES</p>
-    <img src="https://static.wixstatic.com/media/dccef6_ad363004747e42e2973253b9ce816e3a~mv2.png/v1/fill/w_672,h_480,al_c,usm_0.66_1.00_0.01/dccef6_ad363004747e42e2973253b9ce816e3a~mv2.png" alt="Image 2">
-  </div>
-<!-- slide 3 -->
+  <body>
+    <div class="slideshow">
+      <!-- slide 1 -->
+      <div class="slide active">
+        <h2 style="text-align:center"> Conozca los siguientes pasos.</h2>
+        <p style= "text-align: justify"> Cada paso tendrá vídeos y actividades que podrás completar a tu propio ritmo. Durante este proceso, te sugiero que la curiosidad forme parte permanente de tu jornada. Mantén la mente abierta y date la oportunidad de explorar nuevos puntos de vista.</p>
+        <p style="font-style: italic; font-size: 14px;">Haz clic en la flecha de abajo para continuar.</p>
+        <img style="text-align:center" src= "https://www.worthyweightloss.com/wp-content/uploads/2018/09/am-I-a-candidate-side.jpg" alt="Image 2" style="width: 500px; height: 300px; margin-bottom: 10px;">
+      </div>
+      <!-- slide 2 -->
+      <div class="slide">
+        <h2 style="text-align:center">PASSO 1 - CONOCER:</h2>
+        <p style="text-align:center">HABILIDADES</p>
+        <p style="text-align:center">ASPIRACIONES</p>
+        <p style="text-align:center">OPORTUNIDADES</p>
+        <img style="text-align:center" src= "https://static.wixstatic.com/media/dccef6_ad363004747e42e2973253b9ce816e3a~mv2.png/v1/fill/w_672,h_480,al_c,usm_0.66_1.00_0.01/dccef6_ad363004747e42e2973253b9ce816e3a~mv2.png" alt="Image 2" style="width: 500px; height: 300px; margin-bottom: 10px;">
+  </ul>
+      </div>
+      <!-- slide 3 -->
       <div class="slide">
         <h2 style="text-align:center">PASSO 2 - PLANEAR:</h2>
         <p style="text-align:center">METAS</p>
@@ -97,37 +98,42 @@
          <p style="text-align: justify;"> Ahora que tienes una visión general del contenido, es el momento de iniciar tu jornada. Una vez completados todos los pasos, podrás elegir el siguiente paso con más claridad y confianza.</p>
   </ul>
     </div>    
-<script>
-  var slides = document.querySelectorAll('.slide');
-  var currentSlide = 0;
-
-  function showSlide(n) {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = n;
-    slides[currentSlide].classList.add('active');
-  }
-
-  function prevSlide() {
-    if (currentSlide === 0) {
-      showSlide(slides.length - 1);
-    } else {
-      showSlide(currentSlide - 1);
-    }
-  }
-
-  function nextSlide() {
-    if (currentSlide === slides.length - 1) {
-      showSlide(0);
-    } else {
-      showSlide(currentSlide + 1);
-    }
-  }
-
-  var prevButton = document.querySelector('.prev');
-  var nextButton = document.querySelector('.next');
-
-  prevButton.addEventListener('click', prevSlide);
-  nextButton.addEventListener('click', nextSlide);
-</script>
-</body>
+    <div class="buttons">
+      <span class="arrow prev">&#10094;</span>
+      <span class="arrow next">&#10095;</span>
+    </div>
+    
+    <script>
+      var slides = document.querySelectorAll('.slide');
+      var currentSlide = 0;
+      
+      function showSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = n;
+        slides[currentSlide].classList.add('active');
+      }
+      
+      function prevSlide() {
+        if (currentSlide == 0) {
+          showSlide(slides.length - 1);
+        } else {
+          showSlide(currentSlide - 1);
+        }
+      }
+      
+      function nextSlide() {
+        if (currentSlide == slides.length - 1) {
+          showSlide(0);
+        } else {
+          showSlide(currentSlide + 1);
+        }
+      }
+      
+      var prevButton = document.querySelector('.prev');
+      var nextButton = document.querySelector('.next');
+      
+      prevButton.addEventListener('click', prevSlide);
+      nextButton.addEventListener('click', nextSlide);
+    </script>
+  </body>
 </html>
